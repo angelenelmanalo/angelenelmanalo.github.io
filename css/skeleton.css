@@ -64,7 +64,7 @@
 	animation-play-state: running;
 }
 
-.wave:on-click {
+.wave:active {
 	animation-play-state: running;
 }
 
