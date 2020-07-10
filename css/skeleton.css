@@ -32,7 +32,7 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
@@ -48,30 +48,58 @@
 	margin-top: 8rem;
 }
 
+.recent-work {
+	margin-top: 10rem;
+}
+
+.footer {
+	margin: 8rem 0;
+	padding: 5rem 0;
+	text-align: center;
+	border-top: 1px solid #eee;
+}
+
+.social-icon {
+	opacity: 0.5;
+	transition: opacity 0.3s;
+}
+
+.social-icon:hover {
+	opacity: 1.0;
+	transition: opacity 0.3s;
+}
+
 .emoji {
 	font-size: 4rem;
+	cursor: pointer;
 }
 
 .wave {
-  animation-name: wave-animation;
-  animation-duration: 1s;
-	-webkit-animation-duration: 1s;
   display: inline-block;
-	animation-play-state: paused;
+	animation-name: wave-animation;
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+	animation-delay: 1s;
 }
 
 .wave:hover {
-	animation-play-state: running;
-}
-
-.wave:active {
-	animation-play-state: running;
+	animation-name: wave-animation;
+  animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes wave-animation {
 	from {
 		-webkit-transform: none;
-		transform:none
+		transform: none;
 	}
 	15% {
 		-webkit-transform: translate3d(-20%,0,0) rotate3d(0,0,1,-10deg);
@@ -95,14 +123,14 @@
 	}
 	to {
 		-webkit-transform: none;
-		transform:none
+		transform: none;
 	}
 }
 
 @keyframes wave-animation {
 	from {
 		-webkit-transform: none;
-		transform:none
+		transform: none;
 	}
 	15% {
 		-webkit-transform: translate3d(-20%,0,0) rotate3d(0,0,1,-10deg);
@@ -126,7 +154,7 @@
 	}
 	to {
 		-webkit-transform: none;
-		transform: none
+		transform: none;
 	}
 }
 
@@ -135,8 +163,9 @@
 	.navbar {
 		font-family: 'Overpass Mono', monospace;
 		display: block;
-		line-height: 6.5rem;
+		line-height: 3rem;
 		width: 100%;
+		margin-top: 3rem;
 		z-index: 99;
 	}
 	
@@ -162,6 +191,17 @@
 	.navbar-logo {
 		float: left;
 		margin-bottom: 0;
+		-webkit-box-shadow: inset 0 -5px 0 #004ECC;
+		box-shadow: inset 0 -5px 0 #004ECC;
+		transition: -webkit-box-shadow 0.3s;
+		transition: box-shadow 0.3s;
+	}
+	
+	.navbar-logo:hover {
+		-webkit-box-shadow: inset 0 -15px 0 #004ECC;
+		box-shadow: inset 0 -15px 0 #004ECC;
+		transition: -webkit-box-shadow 0.3s;
+		transition: box-shadow 0.3s;
 	}
 	
 	.navbar-item {
@@ -172,9 +212,17 @@
 		text-transform: lowercase;
     font-size: 16px;
     font-weight: 200;
-    text-decoration: none;
-    color: #000;
-		opacity: 0.5;
+		-webkit-box-shadow: inset 0 -5px 0 #004ECC;
+		box-shadow: inset 0 -5px 0 #004ECC;
+		transition: -webkit-box-shadow 0.3s;
+		transition: box-shadow 0.3s;
+	}
+	
+	.navbar-item:hover {
+		-webkit-box-shadow: inset 0 -15px 0 #004ECC;
+		box-shadow: inset 0 -15px 0 #004ECC;
+		transition: -webkit-box-shadow 0.3s;
+		transition: box-shadow 0.3s;
 	}
 	
 	.navbar-item:last-child {
@@ -186,6 +234,15 @@
 		display: inline-block;
 		margin-right: 25px;
 		margin-bottom: 0;
+		-webkit-box-shadow: inset 0 -5px 0 #004ECC;
+		box-shadow: inset 0 -5px 0 #004ECC;
+	}
+	
+	.navbar-dropdown:hover {
+		-webkit-box-shadow: inset 0 -15px 0 #004ECC;
+		box-shadow: inset 0 -15px 0 #004ECC;
+		transition: -webkit-box-shadow 0.3s;
+		transition: box-shadow 0.3s;
 	}
 	
 	.navbar-dropdown > a:after {
@@ -205,13 +262,11 @@
 		background-color: #fff;
 		border: 1px solid #eee;
 		border-radius: 3px;
-		-webkit-filter: drop-shadow(0 0 6px rgba(0,0,0,.1));
-       -moz-filter: drop-shadow(0 0 6px rgba(0,0,0,.1));
-            filter: drop-shadow(0 0 6px rgba(0,0,0,.1));
-		-webkit-transition: opacity 200ms ease;
-		transition: opacity 200ms ease;
+		-webkit-filter: drop-shadow(0 0 3px rgba(0,0,0,.1));
+       -moz-filter: drop-shadow(0 0 3px rgba(0,0,0,.1));
+            filter: drop-shadow(0 0 3px rgba(0,0,0,.1));
 		z-index: 1;
-		padding: 0 12px;
+		padding: 15px;
 	}
 	
 	.navbar-dropdown-item {
@@ -342,6 +397,16 @@ body {
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+::selection {
+  background: #004ECC;
+	color: #fff;
+}
+::-moz-selection {
+  background: #004ECC;
+	color: #fff;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
@@ -365,7 +430,13 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 }
 
 p {
-  margin-top: 0; }
+  margin-top: 0;
+	font-size: 16px;
+}
+
+b {
+	font-weight: 400;
+}
 
 
 /* Links
