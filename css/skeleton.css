@@ -36,6 +36,216 @@
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
+
+.header {
+  margin: 6rem;
+  text-align: center; }
+
+.navbar {
+	display: none; }
+
+.intro {
+	margin-top: 8rem;
+}
+
+.emoji {
+	font-size: 4rem;
+}
+
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+  display: inline-block;
+	animation-play-state: paused;
+}
+
+.wave:hover {
+	animation-play-state: running;
+}
+
+.wave:on-click {
+	animation-play-state: running;
+}
+
+@-webkit-keyframes wave-animation {
+	from {
+		-webkit-transform: none;
+		transform:none
+	}
+	15% {
+		-webkit-transform: translate3d(-20%,0,0) rotate3d(0,0,1,-10deg);
+		transform: translate3d(-20%,0,0) rotate3d(0,0,1,-10deg)
+	}
+	30% {
+		-webkit-transform: translate3d(10%,0,0) rotate3d(0,0,1,7deg);
+		transform: translate3d(10%,0,0) rotate3d(0,0,1,7deg)
+	}
+	45% {
+		-webkit-transform: translate3d(-15%,0,0) rotate3d(0,0,1,-10deg);
+		transform: translate3d(-15%,0,0) rotate3d(0,0,1,-10deg)
+	}
+	60% {
+		-webkit-transform: translate3d(10%,0,0) rotate3d(0,0,1,5deg);
+		transform: translate3d(10%,0,0) rotate3d(0,0,1,5deg)
+	}
+	75% {
+		-webkit-transform: translate3d(-5%,0,0) rotate3d(0,0,1,-2deg);
+		transform: translate3d(-5%,0,0) rotate3d(0,0,1,-2deg)
+	}
+	to {
+		-webkit-transform: none;
+		transform:none
+	}
+}
+
+@keyframes wave-animation {
+	from {
+		-webkit-transform: none;
+		transform:none
+	}
+	15% {
+		-webkit-transform: translate3d(-20%,0,0) rotate3d(0,0,1,-10deg);
+		transform: translate3d(-20%,0,0) rotate3d(0,0,1,-10deg)
+	} 
+	30% {
+		-webkit-transform: translate3d(10%,0,0) rotate3d(0,0,1,7deg);
+		transform: translate3d(10%,0,0) rotate3d(0,0,1,7deg)
+	}
+	45% {
+		-webkit-transform: translate3d(-15%,0,0) rotate3d(0,0,1,-10deg);
+		transform: translate3d(-15%,0,0) rotate3d(0,0,1,-10deg)
+	}
+	60% {
+		-webkit-transform: translate3d(10%,0,0) rotate3d(0,0,1,5deg);
+		transform: translate3d(10%,0,0) rotate3d(0,0,1,5deg)
+	}
+	75% {
+		-webkit-transform: translate3d(-5%,0,0) rotate3d(0,0,1,-2deg);
+		transform: translate3d(-5%,0,0) rotate3d(0,0,1,-2deg)
+	}
+	to {
+		-webkit-transform: none;
+		transform: none
+	}
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+	.navbar {
+		font-family: 'Overpass Mono', monospace;
+		display: block;
+		line-height: 6.5rem;
+		width: 100%;
+		z-index: 99;
+	}
+	
+	.navbar a {
+		text-transform: lowercase;
+    font-size: 16px;
+    font-weight: 200;
+    text-decoration: none;
+    color: #000;
+		opacity: 0.5;
+	}
+	
+	.navbar a:hover {
+		opacity: 1.0;
+	}
+	
+	.navbar-list {
+		list-style: none;
+		float: right;
+		margin-bottom: 0;
+	}
+	
+	.navbar-logo {
+		float: left;
+		margin-bottom: 0;
+	}
+	
+	.navbar-item {
+		position: relative;
+		display: inline-block;
+		margin-right: 25px;
+		margin-bottom: 0;
+		text-transform: lowercase;
+    font-size: 16px;
+    font-weight: 200;
+    text-decoration: none;
+    color: #000;
+		opacity: 0.5;
+	}
+	
+	.navbar-item:last-child {
+		margin-right: 0;
+	}
+	
+	.navbar-dropdown {
+		position: relative;
+		display: inline-block;
+		margin-right: 25px;
+		margin-bottom: 0;
+	}
+	
+	.navbar-dropdown > a:after {
+		content: " ▿";
+	}
+	
+	.navbar-dropdown-list {
+		display: none;
+		visiblity: hidden;
+		opacity: 0;
+		width: 115%;
+		position: absolute;
+		left: 50%;
+		right: auto;
+		text-align: center;
+		transform: translate(-50%, 0);
+		background-color: #fff;
+		border: 1px solid #eee;
+		border-radius: 3px;
+		-webkit-filter: drop-shadow(0 0 6px rgba(0,0,0,.1));
+       -moz-filter: drop-shadow(0 0 6px rgba(0,0,0,.1));
+            filter: drop-shadow(0 0 6px rgba(0,0,0,.1));
+		-webkit-transition: opacity 200ms ease;
+		transition: opacity 200ms ease;
+		z-index: 1;
+		padding: 0 12px;
+	}
+	
+	.navbar-dropdown-item {
+		padding: 0;
+		margin: 0;
+		display: block;
+		border-bottom: 1px solid #eee;
+	}
+	
+	.navbar-dropdown-item:last-child {
+		border: none;
+	}
+	
+	.navbar-dropdown-list a {
+		font-family: 'Overpass', sans-serif;
+		text-transform: lowercase;
+    font-size: 14px;
+    font-weight: 200;
+    text-decoration: none;
+    color: #000;
+		opacity: 0.5;
+	}
+	
+	.navbar-dropdown-list a:hover {
+		opacity: 1.0;
+	}
+	
+	.navbar-dropdown:hover > .navbar-dropdown-list {
+		visibility: visible;
+		opacity: 1;
+		display: block;
+	}
+}
+
 .column,
 .columns {
   width: 100%;
@@ -122,6 +332,7 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
 body {
+	margin: 0;
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
@@ -159,10 +370,11 @@ p {
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 a {
-  color: #1EAEDB; }
-a:hover {
-  color: #0FA0CE; }
+	-webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+}
 
 
 /* Buttons
@@ -296,6 +508,7 @@ ol {
 ol, ul {
   padding-left: 0;
   margin-top: 0; }
+/*
 ul ul,
 ul ol,
 ol ol,
@@ -304,6 +517,7 @@ ol ul {
   font-size: 90%; }
 li {
   margin-bottom: 1rem; }
+*/
 
 
 /* Code
@@ -327,14 +541,13 @@ pre > code {
 th,
 td {
   padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #E1E1E1; }
+  text-align: left; }
 th:first-child,
 td:first-child {
-  padding-left: 0; }
+	padding-left: 0; }
 th:last-child,
 td:last-child {
-  padding-right: 0; }
+	padding-right: 0; }
 
 
 /* Spacing
