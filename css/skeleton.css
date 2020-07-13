@@ -177,7 +177,7 @@
 	.navbar {
 		font-family: 'Overpass Mono', monospace;
 		display: block;
-/*		line-height: 3rem;*/
+		line-height: 3rem;
 		width: 100%;
 		margin-top: 3rem;
 		z-index: 99;
