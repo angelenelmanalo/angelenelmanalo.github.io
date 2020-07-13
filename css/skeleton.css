@@ -518,7 +518,7 @@ input[type="button"].button-primary {
   color: #004ECC;
   background-color: none;
   border-color: #004ECC; 
-	transition: 0.2s; }
+	transition: color 0.2s, background-color 0.2s; }
 .button.button-primary:hover,
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
@@ -532,7 +532,7 @@ input[type="button"].button-primary:focus {
   color: #FFF;
   background-color: #004ECC;
   border-color: #004ECC;
-	transition: 0.2s; }
+	transition: color 0.2s, background-color 0.2s; }
 
 
 /* Forms
