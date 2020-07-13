@@ -54,7 +54,7 @@
 
 .about-img {
 	text-align: center;
-	width: 100%;
+	width: 75%;
 	margin-bottom: 4rem;
 	-webkit-box-shadow: 15px 15px 0 -3.5px #fff, 15px 15px 0 0 #004ECC;
 	box-shadow: 15px 15px 0 -3.5px #fff, 15px 15px 0 0 #004ECC;
@@ -190,12 +190,12 @@
     text-decoration: none;
     color: #000;
 		opacity: 0.5;
-		transition: 0.3s;
+		transition: opacity 0.3s;
 	}
 	
 	.navbar a:hover {
 		opacity: 1.0;
-		transition: 0.3s;
+		transition: opacity 0.3s;
 	}
 	
 	.navbar-list {
@@ -211,7 +211,7 @@
 		background-repeat: no-repeat;
 		background-position: 0% 80%;
 		background-size: 100% 3px;
-		transition: 0.2s;
+		transition: background 0.2s;
 	}
 	
 	.navbar-logo:hover {
@@ -219,7 +219,7 @@
 		background-repeat: no-repeat;
 		background-position: 0% 100%;
 		background-size: 100% 3px;
-		transition: 0.2s;
+		transition: background 0.2s;
 	}
 	
 	.navbar-item {
@@ -234,7 +234,7 @@
 		background-repeat: no-repeat;
 		background-position: 0% 80%;
 		background-size: 100% 3px;
-		transition: 0.2s;
+		transition: background 0.2s;
 	}
 	
 	.navbar-item:hover {
@@ -242,7 +242,7 @@
 		background-repeat: no-repeat;
 		background-position: 0% 100%;
 		background-size: 100% 3px;
-		transition: 0.2s;
+		transition: background 0.2s;
 	}
 	
 	.navbar-item:last-child {
@@ -258,7 +258,7 @@
 		background-repeat: no-repeat;
 		background-position: 0% 80%;
 		background-size: 100% 3px;
-		transition: 0.2s;
+		transition: background 0.2s;
 	}
 	
 	.navbar-dropdown:hover {
@@ -266,7 +266,7 @@
 		background-repeat: no-repeat;
 		background-position: 0% 100%;
 		background-size: 100% 3px;
-		transition: 0.2s;
+		transition: background 0.2s;
 	}
 	
 	.navbar-dropdown > a:after {
