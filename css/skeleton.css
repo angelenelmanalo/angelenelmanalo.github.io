@@ -53,9 +53,16 @@
 }
 
 .about-img {
-	text-align: center;
 	width: 75%;
 	margin-bottom: 4rem;
+}
+
+.img-shadow-border {
+	-webkit-box-shadow: 15px 15px 0 -3.5px #fff, 15px 15px 0 0 #004ECC;
+	box-shadow: 0 0 5px 2px rgba(0,0,0,0.1), 15px 15px 0 -3.5px #fff, 15px 15px 0 0 #004ECC;
+}
+
+.img-border {
 	-webkit-box-shadow: 15px 15px 0 -3.5px #fff, 15px 15px 0 0 #004ECC;
 	box-shadow: 15px 15px 0 -3.5px #fff, 15px 15px 0 0 #004ECC;
 }
