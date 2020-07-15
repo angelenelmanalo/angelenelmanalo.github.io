@@ -5,6 +5,8 @@
 	
 	<link rel="stylesheet" href="css/skeleton.css">
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/hamburgers.css">
+	<script type="text/javascript" src="js/custom.js"></script>
 	
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
@@ -16,6 +18,28 @@
 
 <body>
 	<div class="container">
+		<button class="hamburger hamburger--squeeze menu" type="button" onclick="menuToggle()">
+		<span class="hamburger-box">
+			<span class="hamburger-inner"></span>
+		</span>
+		</button>
+		<nav class="menu-overlay">
+			<ul>
+				<li><a href="https://angelenemanalo.com/">home</a></li>
+				<li><a href="#ux">ux</a>
+					<ul>
+						<li><a href="https://angelenemanalo.com/ux/uci-vsc.html">uci vsc</a></li>
+					</ul>
+				</li>
+				<li><a href="#design">design</a>
+					<ul>
+						<li><a href="https://angelenemanalo.com/design/uci-vsc.html">uci vsc</a></li>
+					</ul>
+				</li>
+				<li><a href="https://angelenemanalo.com/about.html">about</a></li>
+			</ul>
+		</nav>
+		
 		<nav class="navbar" role="navigation">
 			<ul class="navbar-logo"><a href="https://angelenemanalo.com"><b>am</b></a></ul>
 			<ul class="navbar-list">
