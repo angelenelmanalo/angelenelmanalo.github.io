@@ -239,7 +239,7 @@
 }
 
 /* desktop navigation menu */
-@media (min-width: 768px) {
+@media only screen and (min-width: 812px) and (orientation: portrait) {
 	.hamburger {
 		visibility: hidden; }
 
